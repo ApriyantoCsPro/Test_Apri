@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parking Creator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-parking"></i>
+        <h1>Parking Apps by Apri Yanto</h1>
+        <p>This app prioritizes the business logic of this app rather than the user interface.
+          <br>
+          And also there is still much that needs to be developed further.</p>
+      </div>
+      <form onsubmit="createParking();return false">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Create Parking Data</h2>
+        </div>
+        <div class="info">
+          <select id="vehicle-type">
+            <option value="">Vehicle type*</option>
+            <option value="mobil">Mobil</option>
+            <option value="motor">Motor</option>
+          </select>
+          <label for="checkin">Checkin:</label>
+          <input id="checkin" type="datetime-local" step=1 id="checkin" name="checkin">
+          <label for="checkout">Checkout:</label>
+          <input id="checkout" type="datetime-local" step=1 id="checkout" name="checkout">
+        </div>
+        <button type="submit" href="/">Submit</button>
+      </form>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="javascripts/index.js"></script>
+  </body>
+</html>

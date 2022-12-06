@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parking Creator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+  </head>
+  <body onload="loadParkingList()">
+    <div class="main-block">
+      <form onsubmit="redirect();return false">
+        <table id="parking-list">
+          <tr>
+            <th>Vehicle Type</th>
+            <th>Checkin</th>
+            <th>Checkout</th>
+            <th>Price</th>
+            <th>Status</th>
+          </tr>
+        </table>
+        <button type="submit" href="/">Create New Data</button>
+      </form>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="javascripts/index.js"></script>
+  </body>
+</html>
