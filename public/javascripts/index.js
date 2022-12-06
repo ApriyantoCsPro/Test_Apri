@@ -4,13 +4,13 @@ async function createParking() {
     const checkinValue = document.getElementById("checkin").value;
     const checkoutValue = document.getElementById("checkout").value;
 
-    const data = await axios.post('http://localhost:8080/api/parking', {
+    const data = await axios.post('http://localhost:3000/api/parking', {
       type: typeValue,
       checkin: checkinValue,
       checkout: checkoutValue
     })
     console.log("success", data)
-    window.location.replace("http://localhost:8080/parking-list.html");
+    window.location.replace("http://localhost:3000/parking-list.html");
   } catch (error) {
     console.log("error", error)
     alert(error?.response?.data?.message || error?.message)
@@ -18,12 +18,12 @@ async function createParking() {
 }
 
 function redirect() {
-  window.location.replace("http://localhost:8080/index.html");
+  window.location.replace("http://localhost:3000/index.html");
 }
 
 async function loadParkingList() {
   try {
-    const data = await axios.get('http://localhost:8080/api/parking')
+    const data = await axios.get('http://localhost:3000/api/parking')
     const table = document.getElementById("parking-list");
     // Mon Dec 05 2022 13:00:00 GMT+0700 (Indochina Time)
     for(parkingData of data.data) {
